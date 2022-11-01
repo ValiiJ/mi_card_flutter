@@ -11,78 +11,74 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
-            children: [
-              const CircleAvatar(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/profile.png'),
               ),
-              const Text(
+              Text(
                 'Valmir',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
-                  color: Colors.white,
+                  color: Colors.teal,
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 'FLUTTER DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
-                  color: Colors.white,
+                  color: Colors.teal,
                   fontSize: 20,
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20.0,
-              ),
-              Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    const SizedBox(width: 10.0),
-                    Text(
-                      '+38349123456',
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0),
-                    ),
-                  ],
+                width: 150.0,
+                child: Divider(
+                  color: Color.fromARGB(255, 117, 141, 138),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.mail,
-                      color: Colors.teal,
+              Card(
+                color: Colors.teal,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    '+38349123456',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-                    const SizedBox(width: 10.0),
-                    Text(
-                      'profilenoid@something.nn',
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.teal,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'profilenoid@something.nn',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                      fontFamily: 'Source Sans Pro',
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
